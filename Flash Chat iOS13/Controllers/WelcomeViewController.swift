@@ -8,14 +8,13 @@
 
 import UIKit
 
-class WelcomeViewController: UILabel {
+class WelcomeViewController: UIViewController {
 
     @IBOutlet weak var titleLabel: UILabel!
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        titleLabel.text = "⚡️FlashChat"
         
         titleLabel.text = ""
         let titleText = "⚡️FlashChat"
