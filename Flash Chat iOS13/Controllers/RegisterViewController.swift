@@ -16,7 +16,6 @@ class RegisterViewController: UIViewController {
     @IBOutlet weak var passwordTextfield: UITextField!
     
     @IBAction func registerPressed(_ sender: UIButton) {
-        print("hello")
        
         if let email = emailTextfield.text, let password = passwordTextfield.text {
             Auth.auth().createUser(withEmail: email, password: password) { authResult, error in
@@ -24,7 +23,7 @@ class RegisterViewController: UIViewController {
                     print(e.localizedDescription) // This displays the error message. localizedDescription is the just the error string in the device language.
                 } else {
                     //Navigate to the ChatViewController
-                    self.performSegue(withIdentifier: "RegisterToChat", sender: self)
+                    self.performSegue(withIdentifier: K.registerSegue, sender: self)
                 }
             }
         }

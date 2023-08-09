@@ -19,7 +19,7 @@ class ChatViewController: UIViewController {
         super.viewDidLoad()
         
         // Below sets the navigation bar title
-        title = "⚡️FlashChat"
+        title = K.appName
         
         // Below will hide the default back button in the navigation bar
         navigationItem.hidesBackButton = true
