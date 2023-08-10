@@ -43,12 +43,16 @@ class ChatViewController: UIViewController {
     
     func loadMessages() {
         
-        messages = []
-        
-        db.collection(K.FStore.collectionName).getDocuments { querySnapShot, error in
+        db.collection(K.FStore.collectionName)
+            .order(by: K.FStore.dateField)
+            .addSnapshotListener { querySnapShot, error in
+            
+            self.messages = []
+            
             if let error {
                 print("There was an error retrieving the messages, \(error)")
             } else {
+                
                 if let snapshotDocuments = querySnapShot?.documents {
                     for doc in snapshotDocuments {
                         let data = doc.data()
@@ -73,7 +77,8 @@ class ChatViewController: UIViewController {
         if let messageBody = messageTextfield.text, let messageSender = Auth.auth().currentUser?.email {
             db.collection(K.FStore.collectionName).addDocument(data: [
                 K.FStore.senderField: messageSender,
-                K.FStore.bodyField: messageBody
+                K.FStore.bodyField: messageBody,
+                K.FStore.dateField: Date().timeIntervalSince1970
             ]) { (error) in
                 if let e = error {
                     print("There was an issue saving data to FireStore, \(e)")
@@ -82,7 +87,6 @@ class ChatViewController: UIViewController {
                 }
             }
         }
-        
     }
     
     @IBAction func logOutPress(_ sender: UIBarButtonItem) {
