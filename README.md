@@ -1,55 +1,95 @@
-![App Brewery Banner](Documentation/AppBreweryBanner.png)
+# Swift iOS Landmarks App
+<img src="ExampleScreenshots/example-featured.jpg" height="500"><img src="ExampleScreenshots/example-detail.jpg" height="500"><img src="ExampleScreenshots/example-list.jpg" height="500">
 
-# Flash-Chat
+**Table of Contents**
+- [Introduction](#introduction)
+- [Motivation](#motivation)
+- [Technology Used](#technologyUsed)
+- [Build Status](#buildStatus)
+- [Features](#features)
+- [Installation](#installation)
+- [Execution](#execution)
 
-## Our Goal
+## Introduction <a name="introduction"></a>
+An iOS app displaying a range of Landmarks with details and geographical information. Users can also favourite landmarks and filter a scrollable list of Landmarks to just their favourites.
 
-One of the most fundamental component of modern iOS apps is the Table View. Table Views are used everywhere from the Mail app to the Messages app. It’s a crucial part of every iOS developer’s tool belt. In this tutorial we’ll be getting to grips with Table Views, creating custom cells, and making our own cloud-based backend database. It’s going to be epic, so buckle up.
+## Motivation <a name="motivation"></a>
+This is a personal learning project aimed to teach me the tools and technology needed to build an iOS application. As later I would like to deploy an iOS application to the Apple app store.
 
-## What you will create
+## Technology Used <a name="technologyUsed"></a>
+<table>
+  <tbody>
+    <tr>
+      <td>Language</td>
+      <td>Swift</td>
+    </tr>
+    <tr>
+      <td>Frameworks</td>
+      <td>SwiftUI</td>
+    </tr>
+  </tbody>
+</table>
 
-Flash Chat is an internet based messaging app similar to WhatsApp, the popular messaging app that was bought by Facebook for $22 billion. We will be using a service called Firebase Firestore as a backend database to store and retrieve our messages from the cloud. 
+## Build Status <a name="buildStatus"></a>
+Project is completed.
 
-## What you will learn
+## Features <a name="features"></a>
+- Navigation bar
+- Featured window - Categories
+- Featured window - Horizontal scrollable cards
+- List window - Favourite Filter
+- Detail window - Landmark information
+- Detail window - favourite 
+- Detail window - Maps
 
-* How to integrate third party libraries in your app using Cocoapods and Swift Package Manager.
-* How to store data in the cloud using Firebase Firestore.
-* How to query and sort the Firebase database.
-* How to use Firebase for user authentication, registration and login.
-* How to work with UITableViews and how to set their data sources and delegates.
-* How to create custom views using .xib files to modify native design components.
-* How to embed View Controllers in a Navigation Controller and understand the navigation stack.
-* How to create a constants file and use static properties to store Strings and other constants.
-* Learn about Swift loops and create animations using loops.
-* Learn about the App Lifecycle and how to use viewWillAppear or viewWillDisappear.
-* How to create direct Segues for navigation.
+### Navigation bar
 
+<img src="ExampleScreenshots/example-navigationBar.jpg" height="500">
 
-# Constants
-```
-struct K {
-    static let cellIdentifier = "ReusableCell"
-    static let cellNibName = "MessageCell"
-    static let registerSegue = "RegisterToChat"
-    static let loginSegue = "LoginToChat"
-    
-    struct BrandColors {
-        static let purple = "BrandPurple"
-        static let lightPurple = "BrandLightPurple"
-        static let blue = "BrandBlue"
-        static let lighBlue = "BrandLightBlue"
-    }
-    
-    struct FStore {
-        static let collectionName = "messages"
-        static let senderField = "sender"
-        static let bodyField = "body"
-        static let dateField = "date"
-    }
-}
+* User can switch between activity views by selecting either one of the icons on the bottom navigation bar
 
-```
+### Featured window - Categories
 
->This is a companion project to The App Brewery's Complete App Developement Bootcamp, check out the full course at [www.appbrewery.co](https://www.appbrewery.co/)
+<img src="ExampleScreenshots/example-featured-categories.jpg" height="500"><img src="ExampleScreenshots/example-fearured-categories2.jpg" height="400">
 
-![End Banner](Documentation/readme-end-banner.png)
+* User can see Landmarks grouped together by their category
+* Landmarks are automatically grouped together depending on their underlying json data category field
+
+### Featured window - Horizontal scrollable cards
+
+<img src="ExampleScreenshots/example-featured-horizontalScroll-1.jpg" height="500"><img src="ExampleScreenshots/example-featured-horizontalScroll-2.jpg" height="500">
+
+* User can scroll horizontally through each category to view the different landmarks
+* User can also click on each image to take them to a detail view of each landmark
+
+### List window - Favourite Filter
+
+<img src="ExampleScreenshots/example-list-Favourites-1.jpg" height="500"><img src="ExampleScreenshots/example-list-Favourites-2.jpg" height="500">
+
+* User can filter the list of landmarks by showing only their favourites by toggling the favourite button
+
+### Detail window - Landmark information
+
+<img src="ExampleScreenshots/example-detail-landmarkInformation.jpg" height="500">
+
+* User can view detailed information about a particular landmark they selected in the featured or list activity window
+* Information includes title, text location, geographical map, and description
+
+### Detail window - favourite 
+
+<img src="ExampleScreenshots/example-list-FavouriteIcon.jpg" height="500">
+
+* User can toggle on/off if a landmark should be favourited or not
+
+Detail window - Maps
+
+<img src="ExampleScreenshots/example-detail-maps-1.jpg" height="500"><img src="ExampleScreenshots/example-detail-maps-2.jpg" height="500">
+
+* User can interact with the map on the detail activity window to view the surrounding area
+
+# Installation <a name="installation"></a>
+* Ensure XCode is installed (only available on MacOS)
+
+# Execution <a name="execution"></a>
+* Open the Landmarks.xcodeproj file in XCode
+* Once the project is open you can click the play button at the top of the IDE to run the iPhone simulator
