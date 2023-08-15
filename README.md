@@ -1,4 +1,4 @@
-# Swift iOS Landmarks App
+# WhatsApp Copy - FlashChat App
 <img src="ExampleScreenshots/example-homeScreen.jpg" height="500"><img src="ExampleScreenshots/example-login.jpg" height="500"><img src="ExampleScreenshots/example-chatView.jpg" height="500">
 
 **Table of Contents**
@@ -11,10 +11,10 @@
 - [Execution](#execution)
 
 ## Introduction <a name="introduction"></a>
-An iOS app displaying a range of Landmarks with details and geographical information. Users can also favourite landmarks and filter a scrollable list of Landmarks to just their favourites.
+Mobile full stack WhatsApp copy app where users can register, login and message each other in a chatroom. Messages are stored in Google Firebase.
 
 ## Motivation <a name="motivation"></a>
-This is a personal learning project aimed to teach me the tools and technology needed to build an iOS application. As later I would like to deploy an iOS application to the Apple app store.
+This is a personal learning project aimed to teach me the Table View. Table Views are used everywhere from the Mail app to Messages app. It's a crucial part of every iOS app. Thus, I want to get to grips with Table Views, creating custom cells, and making my own cloud-based backend database.
 
 ## Technology Used <a name="technologyUsed"></a>
 <table>
@@ -25,7 +25,24 @@ This is a personal learning project aimed to teach me the tools and technology n
     </tr>
     <tr>
       <td>Frameworks</td>
-      <td>SwiftUI</td>
+      <td>Storyboard</td>
+    </tr>
+    <tr>
+      <td>Notable Technology Utilized</td>
+      <td>
+        <ul>
+          <li>Swift Language + Storyboard</li>
+          <li>Storing data in the cloud using Firebase Firestore</li>
+          <li>Querying and sorting Firebase database</li>
+          <li>Firebase for user authentication, registration and login</li>
+          <li>Using UITableViews and setting their data sources and delegates</li>
+          <li>Creating custom views using .xib files to modify native design components</li>
+          <li>Embedding View Controllers in a Navigation Controller and understanding navigation stack</li>
+          <li>Creating constants file and use static properties to store Strings and other constants</li>
+          <li>Create animations using loops</li>
+          <li>Using direct Segues for navigation</li>
+        </ul>
+      </td>
     </tr>
   </tbody>
 </table>
