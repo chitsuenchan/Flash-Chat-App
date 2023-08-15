@@ -24,14 +24,10 @@ This is a personal learning project aimed to teach me the Table View. Table View
       <td>Swift</td>
     </tr>
     <tr>
-      <td>Frameworks</td>
-      <td>Storyboard</td>
-    </tr>
-    <tr>
       <td>Notable Technology Utilized</td>
       <td>
         <ul>
-          <li>Swift Language + Storyboard</li>
+          <li>Storyboard</li>
           <li>Storing data in the cloud using Firebase Firestore</li>
           <li>Querying and sorting Firebase database</li>
           <li>Firebase for user authentication, registration and login</li>
