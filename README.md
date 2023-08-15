@@ -86,32 +86,35 @@ Project is completed.
 
 ### Chat window - Retrieval of cloud stored messages
 
-<img src="ExampleScreenshots/example-detail-landmarkInformation.jpg" height="500">
+<img src="ExampleScreenshots/example-chatWindow-cloudMessages.jpg" height="500">
 
-* User can view detailed information about a particular landmark they selected in the featured or list activity window
-* Information includes title, text location, geographical map, and description
+* When the user open the chatView it will trigger code to fetch the messages stored in the Cloud Firebase FireStore
+* The cloud messages will provide data to the front-end such as sender, receipient, text message, timestamp
 
 ### Chat window - Keyboard pushes up screen
 
-<img src="ExampleScreenshots/example-list-FavouriteIcon.jpg" height="500">
+<img src="ExampleScreenshots/example-chatWindow-keyboardPushUp.jpg" height="500">
 
-* User can toggle on/off if a landmark should be favourited or not
+* When the user select the textbox to type the on-screen keyboard will appear and push the app upwards
+* This is done using a 3rd party library named IQKeyboardManager
 
 ### Chat window - Send a message
 
-<img src="ExampleScreenshots/example-detail-maps-1.jpg" height="500"><img src="ExampleScreenshots/example-detail-maps-2.jpg" height="500">
+<img src="ExampleScreenshots/example-chatWindow-sendMessage-1.jpg" height="500"><img src="ExampleScreenshots/example-chatWindow-sendMessage-2.jpg" height="500">
 
-* User can interact with the map on the detail activity window to view the surrounding area
+* User can type in a message and click the send button. This will send the message to the cloud storage
+* When the message is sent it will instantly refresh the UI with the new message and scroll down automatically
 
 ### Chat window - Logout
 
-<img src="ExampleScreenshots/example-detail-maps-1.jpg" height="500"><img src="ExampleScreenshots/example-detail-maps-2.jpg" height="500">
+<img src="ExampleScreenshots/example-chatWindow-logout.jpg" height="500">
 
-* User can interact with the map on the detail activity window to view the surrounding area
+* User can log out and return to the home screen
 
 # Installation <a name="installation"></a>
 * Ensure XCode is installed (only available on MacOS)
+* Install the 3rd party pods by executing in terminal "pod install" in the project directory
 
 # Execution <a name="execution"></a>
-* Open the Landmarks.xcodeproj file in XCode
-* Once the project is open you can click the play button at the top of the IDE to run the iPhone simulator
+* Open the "Flash Chat iOS13.xcworkspace" file in XCode
+* Once the project is open you can click the play button at the top of the IDE to run the iPhone simulator or use a physical device
