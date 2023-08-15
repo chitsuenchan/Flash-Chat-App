@@ -56,54 +56,65 @@ Project is completed.
 - Chat window - Send a message
 - Chat window - Logout 
 
-### Navigation bar
+### Register new users
 
-<img src="ExampleScreenshots/example-navigationBar.jpg" height="500">
+<img src="ExampleScreenshots/example-register.jpg" height="500">
 
-* User can switch between activity views by selecting either one of the icons on the bottom navigation bar
+* User can register a new account by typing in a unique name and password longer than 6 characters.
+* Registration is created through FireBase.
 
-### Featured window - Categories
+### Login for existing users
 
-<img src="ExampleScreenshots/example-featured-categories.jpg" height="500"><img src="ExampleScreenshots/example-fearured-categories2.jpg" height="400">
+<img src="ExampleScreenshots/example-login.jpg" height="500">
 
-* User can see Landmarks grouped together by their category
-* Landmarks are automatically grouped together depending on their underlying json data category field
+* Existing users can login through the login screen
+* Authentication is done through FireBase.
 
-### Featured window - Horizontal scrollable cards
+### Chat window - custom cells for different users 
 
-<img src="ExampleScreenshots/example-featured-horizontalScroll-1.jpg" height="500"><img src="ExampleScreenshots/example-featured-horizontalScroll-2.jpg" height="500">
+<img src="ExampleScreenshots/example-chatWindow-customCells.jpg" height="500">
 
-* User can scroll horizontally through each category to view the different landmarks
-* User can also click on each image to take them to a detail view of each landmark
+* Logged in user will have a custom .XIB message cell compared to the sender
+* Custom cells will hide and display cell contents based on back-end logic
 
-### List window - Favourite Filter
+### Chat window - Scrollable and ordered list 
 
-<img src="ExampleScreenshots/example-list-Favourites-1.jpg" height="500"><img src="ExampleScreenshots/example-list-Favourites-2.jpg" height="500">
+<img src="ExampleScreenshots/example-chatWindow-scrollableList.jpg" height="500">
 
-* User can filter the list of landmarks by showing only their favourites by toggling the favourite button
+* User can scroll up for previous messages
+* Messages are ordered based on the message created timestamp
 
-### Detail window - Landmark information
+### Chat window - Retrieval of cloud stored messages
 
-<img src="ExampleScreenshots/example-detail-landmarkInformation.jpg" height="500">
+<img src="ExampleScreenshots/example-chatWindow-cloudMessages.jpg" height="500">
 
-* User can view detailed information about a particular landmark they selected in the featured or list activity window
-* Information includes title, text location, geographical map, and description
+* When the user open the chatView it will trigger code to fetch the messages stored in the Cloud Firebase FireStore
+* The cloud messages will provide data to the front-end such as sender, receipient, text message, timestamp
 
-### Detail window - favourite 
+### Chat window - Keyboard pushes up screen
 
-<img src="ExampleScreenshots/example-list-FavouriteIcon.jpg" height="500">
+<img src="ExampleScreenshots/example-chatWindow-keyboardPushUp.jpg" height="500">
 
-* User can toggle on/off if a landmark should be favourited or not
+* When the user select the textbox to type the on-screen keyboard will appear and push the app upwards
+* This is done using a 3rd party library named IQKeyboardManager
 
-Detail window - Maps
+### Chat window - Send a message
 
-<img src="ExampleScreenshots/example-detail-maps-1.jpg" height="500"><img src="ExampleScreenshots/example-detail-maps-2.jpg" height="500">
+<img src="ExampleScreenshots/example-chatWindow-sendMessage-1.jpg" height="500"><img src="ExampleScreenshots/example-chatWindow-sendMessage-2.jpg" height="500">
 
-* User can interact with the map on the detail activity window to view the surrounding area
+* User can type in a message and click the send button. This will send the message to the cloud storage
+* When the message is sent it will instantly refresh the UI with the new message and scroll down automatically
+
+### Chat window - Logout
+
+<img src="ExampleScreenshots/example-chatWindow-logout.jpg" height="500">
+
+* User can log out and return to the home screen
 
 # Installation <a name="installation"></a>
 * Ensure XCode is installed (only available on MacOS)
+* Install the 3rd party pods by executing in terminal "pod install" in the project directory
 
 # Execution <a name="execution"></a>
-* Open the Landmarks.xcodeproj file in XCode
-* Once the project is open you can click the play button at the top of the IDE to run the iPhone simulator
+* Open the "Flash Chat iOS13.xcworkspace" file in XCode
+* Once the project is open you can click the play button at the top of the IDE to run the iPhone simulator or use a physical device
