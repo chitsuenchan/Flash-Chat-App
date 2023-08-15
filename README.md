@@ -1,5 +1,5 @@
 # Swift iOS Landmarks App
-<img src="ExampleScreenshots/example-featured.jpg" height="500"><img src="ExampleScreenshots/example-detail.jpg" height="500"><img src="ExampleScreenshots/example-list.jpg" height="500">
+<img src="ExampleScreenshots/example-homeScreen.jpg" height="500"><img src="ExampleScreenshots/example-login.jpg" height="500"><img src="ExampleScreenshots/example-chatView.jpg" height="500">
 
 **Table of Contents**
 - [Introduction](#introduction)
