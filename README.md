@@ -47,13 +47,14 @@ This is a personal learning project aimed to teach me the Table View. Table View
 Project is completed.
 
 ## Features <a name="features"></a>
-- Navigation bar
-- Featured window - Categories
-- Featured window - Horizontal scrollable cards
-- List window - Favourite Filter
-- Detail window - Landmark information
-- Detail window - favourite 
-- Detail window - Maps
+- Register new users
+- Login for existing users
+- Chat window - custom cells for different users 
+- Chat window - Scrollable and ordered list 
+- Chat window - Retrieval of cloud stored messages
+- Chat window - Keyboard pushes up screen
+- Chat window - Send a message
+- Chat window - Logout 
 
 ### Navigation bar
 
